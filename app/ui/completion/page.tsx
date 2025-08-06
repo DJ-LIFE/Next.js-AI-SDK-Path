@@ -59,7 +59,7 @@ export default function CompletionPage() {
 					type="text"
 						className="flex-1 dark:bg-zinc-800 p-2 pl-4 border-zinc-300 dark:border-zinc-100 rounded-l-lg"
 					/>
-					<button type="submit" className="py-2 px-4 bg-blue-500 text-white hover:bg-blue-600 rounded-r-lg">Send</button>
+					<button type="submit" className="py-2 px-4 bg-blue-500 text-white test-sm font-bold hover:bg-blue-600 rounded-r-lg">Send</button>
 				</div>
 			</form>
 		</div>
