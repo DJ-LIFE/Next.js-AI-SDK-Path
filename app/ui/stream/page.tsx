@@ -3,7 +3,7 @@
 import { useCompletion } from "@ai-sdk/react";
 
 export default function StreamPage() {
-	const {input, handleInputChange, handleSubmit, completion, isLoading, error, setInput, stop} = useCompletion({
+	const { input, handleInputChange, handleSubmit, completion, isLoading, error, setInput, stop } = useCompletion({
 		api: "/api/stream",
 	});
 
@@ -21,21 +21,21 @@ export default function StreamPage() {
 			}}>
 				<div className="mx-auto">
 					<input placeholder="Ask me anything..."
-					value={input}
-					onChange={handleInputChange}
-					type="text"
+						value={input}
+						onChange={handleInputChange}
+						type="text"
 						className="flex-1 dark:bg-zinc-800 p-2 pl-4 border-zinc-300 dark:border-zinc-100 rounded-l-lg"
 					/>
 					{isLoading ? <button onClick={stop} className="cursor-pointer py-2 px-4 bg-red-500 text-white rounded-r-lg">Stop</button>
-					 : 
-					 <button
-					  disabled={isLoading}
-						type="submit"
-						className="py-2 px-4 bg-blue-500 text-white hover:bg-blue-600 rounded-r-lg"
+						:
+						<button
+							disabled={isLoading}
+							type="submit"
+							className="py-2 px-4 bg-blue-500 text-white hover:bg-blue-600 rounded-r-lg"
 						>
-						Send
-					</button>
-					 }
+							Send
+						</button>
+					}
 				</div>
 			</form>
 		</div>
