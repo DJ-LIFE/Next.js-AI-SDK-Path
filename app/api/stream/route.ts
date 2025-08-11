@@ -10,15 +10,15 @@ export async function POST(req: Request) {
       model: google("models/gemini-2.0-flash-exp"),
       prompt,
     });
-		
-		// Log usage information
-		// AI sdk automatically adds some tokens for formatting and context
+
+    // Log usage information
+    // AI sdk automatically adds some tokens for formatting and context
     result.usage.then((usage) => {
       console.log({
-				inputTokens: usage.inputTokens,
-				outputTokens: usage.outputTokens,
-				totalTokens: usage.totalTokens,
-			});
+        inputTokens: usage.inputTokens,
+        outputTokens: usage.outputTokens,
+        totalTokens: usage.totalTokens,
+      });
     });
 
     return result.toUIMessageStreamResponse();
